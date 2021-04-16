@@ -22,11 +22,11 @@ Product.belongsToMany(Tag, {
     unique: false,
   },
   onDelete: 'CASCADE',
-  as:'productTOTags'
+  as:'productToTag'
 });
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
-  trhough: {
+  through: {
     model: ProductTag,
     unique: false,
   },
